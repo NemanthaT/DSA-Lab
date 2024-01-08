@@ -23,7 +23,7 @@ int main(){
         temp->next=nxt;
         temp=nxt;
     }
-    temp=head;
+    
     printLinkedList(head);
 
     printf("Insert data for new Node 1: ");
@@ -32,15 +32,43 @@ int main(){
     printf("New linked list\n");
     printLinkedList(head);
 
-    printf("Insert data for new last Node %d: ",i+1);
+    printf("Insert data for new last Node %d: ",i+2);
     scanf("%d", &data);
     printf("New linked list\n");
     insertAtEnd(&head, data);
     printLinkedList(head);
 
+    printf("Enter the data you want to check: ");
+    scanf("%d", &no);
+    if(searchdata(&head,no)){
+        printf("\n");
+        printf("Data is found\n");
+        printf("\n");
+    }
+    else{
+        printf("\n");
+        printf("Data is not in the link\n");
+        printf("\n");
+    }
+    printf("Enter the data you want to replace: ");
+    scanf("%d", &no);
+    printf("Insert new data: ");
+    scanf("%d", &data);
+    searchandreplace(&head,no,data);
+    printLinkedList(head);
+
     printf("Which node you want to delete: ");
     scanf("%d", &no);
     deleteNode(&head, no);
+    printf("New linked list\n");
+    printLinkedList(head);
+
+    printf("Enter after which node you want to add data: ");
+    scanf("%d", &no);
+    printf("Enter the data: ");
+    scanf("%d", &data);
+    insertDataRight(&head,data,no);
+
     printf("New linked list\n");
     printLinkedList(head);
 
