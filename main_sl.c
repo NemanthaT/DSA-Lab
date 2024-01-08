@@ -43,5 +43,12 @@ int main(){
     printf("New linked list\n");
     printLinkedList(head);
 
+    printf("Enter after which node you want to add data: ");
+    scanf("%d", &no);
+    printf("Enter the data: ");
+    scanf("%d", &data);
+    insertDataRight(&head,data,no);
+    printLinkedList(head);
+
     return 0;
 }

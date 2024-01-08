@@ -69,3 +69,21 @@ void deleteNode(struct Node** headRef, int data){
         i++;
     }
 }
+
+// //insert data to the right side
+
+void insertDataRight(Node** headRef, int data, int no){
+    i=1;
+    nn=*headRef;
+    while(nn->next!=NULL){
+        if(no==i){
+            tmp=createNode(data);
+            nxt=nn->next;
+            nn->next=tmp;
+            tmp->next=nxt;
+            break;
+        }
+        nn=nn->next;
+        i++;
+    }    
+}
