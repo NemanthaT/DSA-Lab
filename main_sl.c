@@ -43,11 +43,31 @@ int main(){
     printf("New linked list\n");
     printLinkedList(head);
 
+    printf("Enter the data you want to check: ");
+    scanf("%d", &no);
+    if(searchdata(&head,no)){
+        printf("\n");
+        printf("Data is found\n");
+        printf("\n");
+    }
+    else{
+        printf("\n");
+        printf("Data is not in the link\n");
+        printf("\n");
+    }
+
     printf("Enter after which node you want to add data: ");
     scanf("%d", &no);
     printf("Enter the data: ");
     scanf("%d", &data);
     insertDataRight(&head,data,no);
+    printLinkedList(head);
+
+    printf("Enter the data you want to replace: ");
+    scanf("%d", &no);
+    printf("Insert new data: ");
+    scanf("%d", &data);
+    searchandreplace(&head,no,data);
     printLinkedList(head);
 
     return 0;

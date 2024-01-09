@@ -87,3 +87,28 @@ void insertDataRight(Node** headRef, int data, int no){
         i++;
     }    
 }
+
+//search data
+int searchdata(Node** headRef, int no){
+    nn=*headRef;
+    while(nn->next!=NULL){
+        if(no==nn->data){
+            return 1;
+        }
+        nn=nn->next;
+    }
+    return 0;
+}
+
+//search and replace
+void searchandreplace(Node** headRef, int no, int data){
+    nn=*headRef;
+    while(nn->next!=NULL){
+        if(searchdata(headRef, no)){
+            nn->data=data;
+        }
+        else{
+            printf("Data not found\n");
+        }
+    }
+}
