@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include<stdlib.h>
 #include<stdbool.h>
 #include "header_stack.h"
 
@@ -31,9 +32,11 @@ bool isEmpty(Stack* stacks){
 void push(int no,Stack* stacks){
     if(isFull(stacks)){
         printf("Stack overloaded\n");
+        return;
     }
     else{
-        stacks->arr[++stacks->data]=no;
+        stacks->arr[stacks->data]=no;
+        ++stacks->data;
     }
 }
 

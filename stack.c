@@ -1,14 +1,14 @@
 #include<stdio.h>
+#include<stdlib.h>
 #include<stdbool.h>
 #include "header_stack.h"
 
 int main(){
-    int no;
-    
-
+    int no,i;
+    Stack* stacks=malloc(sizeof(Stack));
     init(stacks);
 
-    while(isFull(stacks)!=1){
+    while(~isFull(stacks)){
         printf("Enter data for stack: ");
         scanf("%d", &no);
         push(no, stacks);
