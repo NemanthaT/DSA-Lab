@@ -13,9 +13,9 @@ typedef struct stack{
 Stack* stacks;
 
 void init(Stack* stacks); //init the stack, basically means giving top -1
-void push(int no); //push data
-int pop(); //pop data
-bool isFull(); //check the stack is full
-bool isEmpty(); //check the stack is empty
+void push(int no, Stack* stacks); //push data
+int pop(Stack* stacks); //pop data
+bool isFull(Stack* stacks); //check the stack is full
+bool isEmpty(Stack* stacks); //check the stack is empty
 
 #endif

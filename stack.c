@@ -4,18 +4,18 @@
 
 int main(){
     int no;
-    Stack* stacks;
+    
 
     init(stacks);
 
-    while(isFull()!=1){
+    while(isFull(stacks)!=1){
         printf("Enter data for stack: ");
         scanf("%d", &no);
-        push(no);
+        push(no, stacks);
     }
 
     printf("\n");
-    printf("Popped data is: %d", pop());
+    printf("Popped data is: %d", pop(stacks));
 
     return 0;
 }

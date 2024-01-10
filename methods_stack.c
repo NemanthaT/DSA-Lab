@@ -8,7 +8,7 @@ void init(Stack* stacks){
 }
 
 //check the stack is full
-bool isFull(){
+bool isFull(Stack* stacks){
     if(stacks->data==(max-1)){
         return true;
     }
@@ -18,7 +18,7 @@ bool isFull(){
 }
 
 //check the stack is empty
-bool isEmpty(){
+bool isEmpty(Stack* stacks){
     if(stacks->data==-1){
         return true;
     }
@@ -28,8 +28,8 @@ bool isEmpty(){
 }
 
 //push data
-void push(int no){
-    if(isFull()){
+void push(int no,Stack* stacks){
+    if(isFull(stacks)){
         printf("Stack overloaded\n");
     }
     else{
@@ -38,8 +38,8 @@ void push(int no){
 }
 
 //pop data
-int pop(){
-    if(isEmpty()){
+int pop(Stack* stacks){
+    if(isEmpty(stacks)){
         printf("Stack is empty\n");
     }
     else{
