@@ -35,8 +35,7 @@ void push(int no,Stack* stacks){
         return;
     }
     else{
-        stacks->arr[stacks->data]=no;
-        ++stacks->data;
+        stacks->arr[++(stacks->data)]=no;
     }
 }
 
@@ -46,6 +45,6 @@ int pop(Stack* stacks){
         printf("Stack is empty\n");
     }
     else{
-        return stacks->arr[stacks->data--] ;
+        return stacks->arr[(stacks->data)--] ;
     }
 }

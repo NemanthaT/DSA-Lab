@@ -8,7 +8,11 @@ int main(){
     Stack* stacks=malloc(sizeof(Stack));
     init(stacks);
 
-    while(~isFull(stacks)){
+    while(max>0){
+        if(isFull(stacks)==true){
+            printf("Stack overloaded\n");
+            break;
+        }        
         printf("Enter data for stack: ");
         scanf("%d", &no);
         push(no, stacks);
