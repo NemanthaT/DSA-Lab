@@ -77,8 +77,8 @@ void insertDataRight(Node** headRef, int data, int no){
     nn=*headRef;
     while(nn->next!=NULL){
         if(no==i){
-            tmp=createNode(data);
             nxt=nn->next;
+            tmp=createNode(data);
             nn->next=tmp;
             tmp->next=nxt;
             break;

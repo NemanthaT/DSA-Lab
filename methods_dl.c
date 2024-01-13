@@ -121,7 +121,7 @@ int searchdata(Node** headRef, int no){
 void searchandreplace(Node** headRef, int no, int data){
     nn=*headRef;
     while(nn->next!=NULL){
-        if(no==nn->data){
+        if(searchdata(headRef, no)){
             nn->data=data;
         }
         else{
