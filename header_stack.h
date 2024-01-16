@@ -18,5 +18,6 @@ void push(int no, Stack* stacks); //push data
 int pop(Stack* stacks); //pop data
 bool isFull(Stack* stacks); //check the stack is full
 bool isEmpty(Stack* stacks); //check the stack is empty
+void displayStack(Stack* stack, FILE* f); // display elements
 
 #endif
