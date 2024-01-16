@@ -1,0 +1,11 @@
+Popped data is: 10
+Popped data is: 9
+Popped data is: 8
+Popped data is: 7
+Popped data is: 6
+Popped data is: 5
+Popped data is: 4
+Popped data is: 3
+Popped data is: 2
+Popped data is: 1
+Stack is empty

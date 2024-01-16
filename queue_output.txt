@@ -1,0 +1,6 @@
+Dequeued data is: 12
+Dequeued data is: 23
+Dequeued data is: 45
+Dequeued data is: 65
+Dequeued data is: 78
+Queue is empty
