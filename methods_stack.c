@@ -42,9 +42,23 @@ void push(int no,Stack* stacks){
 //pop data
 int pop(Stack* stacks){
     if(isEmpty(stacks)){
-        printf("Stack is empty\n");
+        return true;
     }
     else{
         return stacks->arr[(stacks->data)--] ;
     }
+}
+ // display element
+void displayStack(Stack* stacks, FILE* f){
+    int no;
+    while(max>0){
+        if(isEmpty(stacks)==true){
+            printf("Stack is empty\n");
+            fprintf(f, "Stack is empty\n");
+            break;
+        }
+        no=pop(stacks);        
+        printf("Popped data is: %d\n", no);
+        fprintf(f,"Popped data is: %d\n", no);
+    }    
 }

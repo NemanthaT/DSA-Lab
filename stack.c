@@ -19,7 +19,8 @@ int main(){
     }
 
     printf("\n");
-    printf("Popped data is: %d", pop(stacks));
+
+    displayStack(stacks);
 
     return 0;
 }
