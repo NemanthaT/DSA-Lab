@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "header.h"
+#include "header_btree.h"
 
 struct node* createNode(int data){
 	struct node* nn;
