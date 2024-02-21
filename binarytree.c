@@ -30,4 +30,5 @@ void main(){
         printf("elements are: %d\n", ary[j]);
     }
     
+    root=createNode(ary[0]);
 }
