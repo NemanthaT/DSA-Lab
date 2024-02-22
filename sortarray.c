@@ -2,38 +2,21 @@
 #include<stdlib.h>
 
 void sorting(int arr[],int i){
-    int min,temp,sarr[i],count=1;
-    int k=1;
-    min =arr[0];
-    temp=min;
-    for(int j=0;j<i;j++){
-        if(arr[j]<min){
-            min=arr[j];
-            temp=min;
-        }
-    }
-    sarr[0]=min;
-    while(count!=i){
-        for(int j=0;j<i;j++){
-            if((arr[j]>temp)){
-                for(int l=0;l<i;l++){
-                    if(arr[j]<min){
-                        min=arr[j];
-                    }
-                    
-                }
-                temp=min;
+    int temp,l,j;
+    for(l=0;l<i;l++){
+        for(j=0;j<i;j++){
+            if(arr[j]>arr[j+1]){
+                temp=arr[j+1];
+                arr[j+1]=arr[j];
+                arr[j]=temp;
             }
         }
-        sarr[k]=min;
-        count++;    
-        k++;
-    }
-    printf("Sorted array is: ");
-    for(int j=0;j<i;j++){
-        printf("%d ", sarr[j]);
     }
 
+    printf("Sorted array: ");
+    for(int j=0;j<i;j++){
+        printf("%d ", arr[j]);
+    }
 }
 
 int main(){
