@@ -7,11 +7,13 @@ typedef struct Node {
     struct Node* right;
 }Node;
 
-struct Node *createNode(int value);
-void displayData(Node *parent);
-void inorder(struct Node *root);
-void preorder(struct Node *root);
-void postorder(struct Node *root);
-struct Node *insert(struct Node *node, int key);
+Node *createNode(int value);
+void inorder(Node *root);
+Node *insert(Node *node, int key);
+Node *deleteNode(Node *root, int data);
+int height(Node *root);
+Node *bstToVine(Node *root);
+void compress(Node *grand, int m);
+Node *balanceBST(Node *root);
 
 #endif

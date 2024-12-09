@@ -3,38 +3,44 @@
 #include "header_bt.h"
 
 int main(){
-    int n,value;
-    int i=0;
-    struct Node *root = NULL;
-    struct Node *tmp = NULL;
-    struct Node *lnxt = NULL;
-    struct Node *rnxt = NULL;
+    int value;
+    Node *root = NULL;
+    int Q;
 
-    printf("Enter how many nodes: ");
-    scanf("%d", &n);
-    printf("Enter the date for root node %d: ", i);
-    scanf("%d", &value);
-    root = createNode(value);
-    tmp = root;
-    printf("Root node data: %d\n", root->data);
+    printf("First type query no and press enter\n");
+    printf("Type \"Insert Value\" to insert a node\n");
+    printf("Type \"Delete Value\" to insert a node\n");
+    printf("Type \"Balance\" to Balance\n");
+    printf("Type \"Height\" to get height\n");
+    printf("Type \"Trav\" to traversal\n");
+    printf("Enter Commands: ");
+    printf("\n");
 
-    for(i=1; i<n; i++){
-        printf("Enter the date for node %d: ", i);
-        scanf("%d", &value);
-        tmp = insert(tmp, value);
-        printf("tmp: %d\n", tmp);
+    scanf("%d", &Q);
+    while (Q--) {
+        char query[10];
+        int data;
+        scanf("%s", query);
+        if (strcmp(query,"Insert") == 0) {
+            scanf("%d", &data);
+            root = insert(root, data);
+        } else if (strcmp(query,"Delete") == 0) {
+            scanf("%d", &data);
+            root = deleteNode(root, data);
+        } else if (strcmp(query,"Balance") == 0) {
+            root = balanceBST(root);
+        } else if (strcmp(query,"Height") == 0) {
+            printf("height of the tree: ");
+            printf("%d\n", height(root));
+        } else if (strcmp(query,"Trav") == 0) {
+            printf("In-order traversal  : ");
+            inorder(root);
+            printf("\n");
+        }
+        else{
+            printf("Operation not complete");
+        }
     }
-    printf("Pre-order traversal : ");
-    preorder(root);
-    printf("\n");
-
-    printf("In-order traversal  : ");
-    inorder(root);
-    printf("\n");
-
-    printf("Post-order traversal: ");
-    postorder(root);
-    printf("\n");
 
     return 0;
 
